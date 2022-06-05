@@ -53,10 +53,6 @@ const Home = () => {
                     Mates Motivate | Achieve your goals, celebrate success
                     together.
                 </title>
-                <meta
-                    name="description"
-                    content="Mates Motivate is the next thing in following your goals, we have found in our own lives that the best motivator there is “your mates”. Encourage a stronger commitment, celebrate your wins, and keep you motivated toward completing your goals."
-                />
             </Head>
 
             {/* Hero */}
