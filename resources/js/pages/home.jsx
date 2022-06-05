@@ -53,7 +53,43 @@ const Home = () => {
                     Mates Motivate | Achieve your goals, celebrate success
                     together.
                 </title>
-                <meta name="description" content="" />
+                <meta
+                    name="description"
+                    content="Mates Motivate is the next thing in following your goals, we have found in our own lives that the best motivator there is “your mates”. Encourage a stronger commitment, celebrate your wins, and keep you motivated toward completing your goals."
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://matesmotivate.com/" />
+                <meta
+                    property="og:title"
+                    content="Mates Motivate | Achieve your goals, celebrate success
+                    together."
+                />
+                <meta
+                    property="og:description"
+                    content="Mates Motivate is the next thing in following your goals, we have found in our own lives that the best motivator there is “your mates”. Encourage a stronger commitment, celebrate your wins, and keep you motivated toward completing your goals."
+                />
+                <meta
+                    property="og:image"
+                    content="https://matesmotivate.com/assets/meta.jpg"
+                />
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta
+                    property="twitter:url"
+                    content="https://matesmotivate.com/"
+                />
+                <meta
+                    property="twitter:title"
+                    content="Mates Motivate | Achieve your goals, celebrate success
+                    together."
+                />
+                <meta
+                    property="twitter:description"
+                    content="Mates Motivate is the next thing in following your goals, we have found in our own lives that the best motivator there is “your mates”. Encourage a stronger commitment, celebrate your wins, and keep you motivated toward completing your goals."
+                />
+                <meta
+                    property="twitter:image"
+                    content="https://matesmotivate.com/assets/meta.jpg"
+                />
                 <link
                     rel="apple-touch-icon"
                     sizes="180x180"
@@ -210,10 +246,10 @@ const Home = () => {
                                     </span>
                                 </h1>
                                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                    Anim aute id magna aliqua ad ad non deserunt
-                                    sunt. Qui irure qui lorem cupidatat commodo.
-                                    Elit sunt amet fugiat veniam occaecat fugiat
-                                    aliqua.
+                                    Take the next step in finding your
+                                    motivation and completing your goals. We
+                                    have found in our own lives, the best
+                                    motivator there is are your mates.
                                 </p>
                                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                     <div className="rounded-md shadow">
@@ -256,11 +292,10 @@ const Home = () => {
                         Everything you need to set you up for success
                     </p>
                     <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
-                        Mates Motivate is the next thing in following your
-                        goals, we have found in our own lives that the best
-                        motivator there is “your mates”. Encourage a stronger
-                        commitment, celebrate your wins, and keep you motivated
-                        toward completing your goals.
+                        We've got everything you need to move the needle in your
+                        favour. Inspiration takes you only so far - bring your
+                        community with you on your journey to achieve success;
+                        it's the best way to achieve your dreams.
                     </p>
                     <div className="mt-12">
                         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -295,15 +330,14 @@ const Home = () => {
             <div className="bg-indigo-700">
                 <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-                        <span className="block">Boost your productivity.</span>
+                        <span className="block">Boost your chances.</span>
                         <span className="block">
                             Start using Mates Motivate today.
                         </span>
                     </h2>
                     <p className="mt-4 text-lg leading-6 text-indigo-200">
-                        Ac euismod vel sit maecenas id pellentesque eu sed
-                        consectetur. Malesuada adipiscing sagittis vel nulla
-                        nec.
+                        We're really excited to have you as a part of our
+                        family. Let's achieve together, today.
                     </p>
                     <a
                         href="/register"
@@ -332,7 +366,18 @@ const Home = () => {
                             </a>
                         ))}
                     </div>
-                    <div className="mt-8 md:mt-0 md:order-1">
+                    <div className="mt-8 md:mt-0 md:order-1 flex gap-3 items-center">
+                        <a
+                            href="https://aaiga.com.au"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="/aaiga-logo.svg"
+                                alt="Aagia"
+                                className="h-8 w-8"
+                            />
+                        </a>
                         <p className="text-center text-base text-gray-400">
                             &copy; 2022 Aaiga, Inc. All rights reserved.
                         </p>
