@@ -1,11 +1,13 @@
 import Layout from "../components/layout";
 import NavButton from "../components/nav-button";
+import Button from "../components/button";
 import Card from "../components/card";
 import { FireIcon, LogoutIcon, PencilAltIcon } from "@heroicons/react/outline";
 import { PlusIcon } from "@heroicons/react/solid";
 import { Head, Link, usePage, useForm } from "@inertiajs/inertia-react";
 import { classNames } from "../utils";
 import Confetti from "react-confetti";
+import { InformationCircleIcon } from "@heroicons/react/solid";
 
 function calculateCheckInClasses(event) {
     if (event.passed && !event.checked_in) {
@@ -23,8 +25,33 @@ function calculateCheckInClasses(event) {
     return "border-2 border-gray-200";
 }
 
+const Avatar = ({ avatar }) => {
+    return (
+        <img
+            key={avatar.name}
+            className="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+            src={avatar.avatar}
+        />
+    );
+};
+
+const AvatarStack = ({ avatars }) => {
+    return (
+        <div className="flex -space-x-2 overflow-hidden">
+            {avatars.map((avatar, index) => (
+                <Avatar key={index} avatar={avatar.user} />
+            ))}
+        </div>
+    );
+};
+
 const Goal = ({ goal, owner = false }) => {
     const { post } = useForm({});
+
+    function encourage() {
+        console.log("hello");
+        post(`/goals/${goal.id}/encourage`);
+    }
 
     function leave() {
         post(`/goals/${goal.id}/leave`);
@@ -54,16 +81,12 @@ const Goal = ({ goal, owner = false }) => {
             </div>
             {owner && (
                 <div className="flex -space-x-2 overflow-hidden">
-                    {goal.mates.map((mate) => (
-                        <img
-                            key={mate.name}
-                            className="inline-block h-10 w-10 rounded-full ring-2 ring-white"
-                            src={mate.avatar}
-                        />
+                    {goal.mates.map((mate, index) => (
+                        <Avatar key={index} avatar={mate} />
                     ))}
                     <Link href={`/goals/${goal.id}/mentors/add`}>
                         <div
-                            className="h-10 w-10 rounded-full bg-white border-2 border-gray-50 flex items-center justify-center"
+                            className="h-10 w-10 rounded-full bg-white bg-opacity-75 flex items-center justify-center"
                             alt=""
                         >
                             <PlusIcon className="h-5 w-5 text-gray-900" />
@@ -82,18 +105,39 @@ const Goal = ({ goal, owner = false }) => {
                     ></div>
                 ))}
             </div>
-            {owner && goal.check_in_today && (
-                <div className="mt-3 flex">
+            {owner && goal.encouragements.length > 0 && (
+                <div className="mt-3">
+                    <div className="rounded-md bg-amber-50 p-4">
+                        <div className="flex">
+                            <div className="flex-shrink-0">
+                                <AvatarStack
+                                    avatars={goal.encouragements.slice(0, 3)}
+                                />
+                            </div>
+                            <div className="ml-3 flex-1 md:flex md:justify-between">
+                                <p className="text-sm text-amber-700">
+                                    👏 Your mates are encouraging you!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+            <div className="mt-3 flex">
+                {owner && goal.check_in_today && (
                     <NavButton href={`/goals/${goal.id}/checkin`}>
                         Check in
                     </NavButton>
-                </div>
-            )}
+                )}
+                {!owner && (
+                    <Button onClick={() => encourage()}>Encourage</Button>
+                )}
+            </div>
         </div>
     );
 };
 
-const App = ({ goals = [], responsibilities = [], success = false }) => {
+const App = ({ goals = [], responsibilities = [] }) => {
     const { flash } = usePage().props;
 
     return (
@@ -104,11 +148,11 @@ const App = ({ goals = [], responsibilities = [], success = false }) => {
 
             <div>
                 <h2>Achievements</h2>
-                <div className="flex gap-2 item-center mt-6">
+                <div className="flex item-center mt-6 -space-x-2 overflow-hidden">
                     {[1, 2, 3, 4, 5].map((item) => (
                         <div
                             key={item}
-                            className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center"
+                            className="h-10 w-10 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center"
                         >
                             <FireIcon className="h-6 w-6 text-gray-300" />
                         </div>
@@ -134,7 +178,19 @@ const App = ({ goals = [], responsibilities = [], success = false }) => {
 
             {responsibilities.length > 0 && (
                 <div className="my-4">
-                    <div className="border"></div>
+                    <div className="relative">
+                        <div
+                            className="absolute inset-0 flex items-center"
+                            aria-hidden="true"
+                        >
+                            <div className="w-full border-t border-gray-300" />
+                        </div>
+                        <div className="relative flex justify-start">
+                            <span className="pr-2 bg-white text-sm text-gray-500">
+                                Your mates
+                            </span>
+                        </div>
+                    </div>
                 </div>
             )}
 

@@ -5,7 +5,7 @@ use App\Http\Controllers\GoalController;
 use App\Http\Requests\StoreMentorRequest;
 use App\Models\Goal;
 use App\Models\User;
-
+use Carbon\Carbon;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -35,6 +35,12 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/goals/{goal}/leave', function (Goal $goal) {
         $goal->mates()->detach(Auth::id());
+        return Redirect::route('app');
+    });
+
+    Route::post('/goals/{goal}/encourage', function (Goal $goal) {
+        $goal->encouragements()->create(['user_id' => Auth::id(), 'date' => Carbon::today()]);
+
         return Redirect::route('app');
     });
 

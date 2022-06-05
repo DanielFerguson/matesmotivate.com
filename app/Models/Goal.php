@@ -18,7 +18,7 @@ class Goal extends Model
 
     protected $appends = ['check_in_today', 'track_record'];
 
-    protected $with = ['checkins', 'mates', 'user'];
+    protected $with = ['checkins', 'mates', 'user', 'encouragements'];
 
     protected $fillable = [
         'user_id',
@@ -40,6 +40,11 @@ class Goal extends Model
     public function checkins(): HasMany
     {
         return $this->hasMany(CheckIn::class);
+    }
+
+    public function encouragements(): HasMany
+    {
+        return $this->hasMany(Encouragement::class);
     }
 
     public function getCheckInTodayAttribute()
