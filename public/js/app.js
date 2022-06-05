@@ -7726,6 +7726,8 @@ var Goal = function Goal(_ref3) {
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_4__.useForm)({}),
       post = _useForm.post;
 
+  var user_id = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_4__.usePage)().props.user_id;
+
   function encourage() {
     console.log("hello");
     post("/goals/".concat(goal.id, "/encourage"));
@@ -7794,7 +7796,7 @@ var Goal = function Goal(_ref3) {
               avatars: goal.todays_encouragement.slice(0, 3)
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-            className: "ml-3 flex-1 md:flex md:justify-between",
+            className: "ml-3 flex-1 md:flex md:justify-between items-center",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
               className: "text-sm text-amber-700",
               children: "\uD83D\uDC4F Your mates are encouraging you!"
@@ -7807,7 +7809,9 @@ var Goal = function Goal(_ref3) {
       children: [owner && goal.check_in_today && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_nav_button__WEBPACK_IMPORTED_MODULE_1__["default"], {
         href: "/goals/".concat(goal.id, "/checkin"),
         children: "Check in"
-      }), !owner && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), !owner && goal.todays_encouragement.filter(function (event) {
+        return event.user_id == user_id && event.date == new Date().toISOString().split("T")[0];
+      }).length == 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_button__WEBPACK_IMPORTED_MODULE_2__["default"], {
         onClick: function onClick() {
           return encourage();
         },
@@ -8545,7 +8549,7 @@ var Home = function Home() {
           className: "mt-4 text-lg leading-6 text-indigo-200",
           children: "Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-          href: "#",
+          href: "/register",
           className: "mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto",
           children: "Sign up for free"
         })]

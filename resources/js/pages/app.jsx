@@ -46,6 +46,7 @@ const AvatarStack = ({ avatars }) => {
 
 const Goal = ({ goal, owner = false }) => {
     const { post } = useForm({});
+    const { user_id } = usePage().props;
 
     function encourage() {
         console.log("hello");
@@ -116,7 +117,7 @@ const Goal = ({ goal, owner = false }) => {
                                     )}
                                 />
                             </div>
-                            <div className="ml-3 flex-1 md:flex md:justify-between">
+                            <div className="ml-3 flex-1 md:flex md:justify-between items-center">
                                 <p className="text-sm text-amber-700">
                                     👏 Your mates are encouraging you!
                                 </p>
@@ -131,9 +132,14 @@ const Goal = ({ goal, owner = false }) => {
                         Check in
                     </NavButton>
                 )}
-                {!owner && (
-                    <Button onClick={() => encourage()}>Encourage</Button>
-                )}
+                {!owner &&
+                    goal.todays_encouragement.filter(
+                        (event) =>
+                            event.user_id == user_id &&
+                            event.date == new Date().toISOString().split("T")[0]
+                    ).length == 0 && (
+                        <Button onClick={() => encourage()}>Encourage</Button>
+                    )}
             </div>
         </div>
     );
