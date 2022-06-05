@@ -105,13 +105,16 @@ const Goal = ({ goal, owner = false }) => {
                     ></div>
                 ))}
             </div>
-            {owner && goal.encouragements.length > 0 && (
+            {owner && goal.todays_encouragement.length > 0 && (
                 <div className="mt-3">
                     <div className="rounded-md bg-amber-50 p-4">
                         <div className="flex">
                             <div className="flex-shrink-0">
                                 <AvatarStack
-                                    avatars={goal.encouragements.slice(0, 3)}
+                                    avatars={goal.todays_encouragement.slice(
+                                        0,
+                                        3
+                                    )}
                                 />
                             </div>
                             <div className="ml-3 flex-1 md:flex md:justify-between">

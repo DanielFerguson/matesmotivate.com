@@ -16,9 +16,9 @@ class Goal extends Model
 {
     use HasFactory;
 
-    protected $appends = ['check_in_today', 'track_record'];
+    protected $appends = ['check_in_today', 'track_record', 'todays_encouragement'];
 
-    protected $with = ['checkins', 'mates', 'user', 'encouragements'];
+    protected $with = ['checkins', 'mates', 'user'];
 
     protected $fillable = [
         'user_id',
@@ -45,6 +45,11 @@ class Goal extends Model
     public function encouragements(): HasMany
     {
         return $this->hasMany(Encouragement::class);
+    }
+
+    public function getTodaysEncouragementAttribute()
+    {
+        return $this->encouragements()->whereDate('date', Carbon::today())->get();
     }
 
     public function getCheckInTodayAttribute()

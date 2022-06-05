@@ -7795,7 +7795,7 @@ var Goal = function Goal(_ref3) {
           className: (0,_utils__WEBPACK_IMPORTED_MODULE_5__.classNames)("w-1/12 h-7 rounded-full flex items-center justify-center", calculateCheckInClasses(checkin))
         }, checkin.date);
       })
-    }), owner && goal.encouragements.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+    }), owner && goal.todays_encouragement.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       className: "mt-3",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
         className: "rounded-md bg-amber-50 p-4",
@@ -7804,7 +7804,7 @@ var Goal = function Goal(_ref3) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
             className: "flex-shrink-0",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(AvatarStack, {
-              avatars: goal.encouragements.slice(0, 3)
+              avatars: goal.todays_encouragement.slice(0, 3)
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
             className: "ml-3 flex-1 md:flex md:justify-between",
