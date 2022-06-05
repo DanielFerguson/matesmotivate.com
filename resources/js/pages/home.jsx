@@ -139,11 +139,11 @@ const Home = () => {
                                                 <img
                                                     alt="Mates Motivate"
                                                     className="h-8 w-auto sm:h-10"
-                                                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                                    src="/logo.svg"
                                                 />
                                             </a>
                                             <div className="-mr-2 flex items-center md:hidden">
-                                                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
                                                     <span className="sr-only">
                                                         Open main menu
                                                     </span>
@@ -169,7 +169,7 @@ const Home = () => {
                                         ))}
                                         <a
                                             href="/login"
-                                            className="font-medium text-indigo-600 hover:text-indigo-500"
+                                            className="font-medium text-red-600 hover:text-red-500"
                                         >
                                             Log in
                                         </a>
@@ -195,12 +195,12 @@ const Home = () => {
                                             <div>
                                                 <img
                                                     className="h-8 w-auto"
-                                                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                                    src="/logo.svg"
                                                     alt=""
                                                 />
                                             </div>
                                             <div className="-mr-2">
-                                                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
                                                     <span className="sr-only">
                                                         Close main menu
                                                     </span>
@@ -226,7 +226,7 @@ const Home = () => {
                                         </div>
                                         <a
                                             href="/login"
-                                            className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
+                                            className="block w-full px-5 py-3 text-center font-medium text-red-600 bg-gray-50 hover:bg-gray-100"
                                         >
                                             Log in
                                         </a>
@@ -241,7 +241,7 @@ const Home = () => {
                                     <span className="block xl:inline">
                                         Achieve your goals,
                                     </span>{" "}
-                                    <span className="block text-indigo-600 xl:inline">
+                                    <span className="block text-red-600 xl:inline">
                                         celebrate success
                                     </span>
                                 </h1>
@@ -255,7 +255,7 @@ const Home = () => {
                                     <div className="rounded-md shadow">
                                         <a
                                             href="/register"
-                                            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                                            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10"
                                         >
                                             Get started
                                         </a>
@@ -263,7 +263,7 @@ const Home = () => {
                                     <div className="mt-3 sm:mt-0 sm:ml-3">
                                         <a
                                             href="/login"
-                                            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                                            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 md:py-4 md:text-lg md:px-10"
                                         >
                                             Login
                                         </a>
@@ -285,7 +285,7 @@ const Home = () => {
             {/* Features */}
             <div className="relative bg-white py-16 sm:py-24 lg:py-32">
                 <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-                    <h2 className="text-base font-semibold uppercase tracking-wider text-indigo-600">
+                    <h2 className="text-base font-semibold uppercase tracking-wider text-red-600">
                         Achieve more
                     </h2>
                     <p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -304,7 +304,7 @@ const Home = () => {
                                     <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
                                         <div className="-mt-6">
                                             <div>
-                                                <span className="inline-flex items-center justify-center rounded-md bg-indigo-500 p-3 shadow-lg">
+                                                <span className="inline-flex items-center justify-center rounded-md bg-red-500 p-3 shadow-lg">
                                                     <feature.icon
                                                         className="h-6 w-6 text-white"
                                                         aria-hidden="true"
@@ -327,7 +327,7 @@ const Home = () => {
             </div>
 
             {/* Register CTA */}
-            <div className="bg-indigo-700">
+            <div className="bg-red-700">
                 <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
                         <span className="block">Boost your chances.</span>
@@ -335,13 +335,13 @@ const Home = () => {
                             Start using Mates Motivate today.
                         </span>
                     </h2>
-                    <p className="mt-4 text-lg leading-6 text-indigo-200">
+                    <p className="mt-4 text-lg leading-6 text-red-200">
                         We're really excited to have you as a part of our
                         family. Let's achieve together, today.
                     </p>
                     <a
                         href="/register"
-                        className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto"
+                        className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-red-50 sm:w-auto"
                     >
                         Sign up for free
                     </a>

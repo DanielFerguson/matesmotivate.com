@@ -15,7 +15,7 @@ const NavBar = () => {
                             <div className="relative flex justify-between h-16">
                                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                     {/* Mobile menu button */}
-                                    {/* <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                    {/* <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
                                         <span className="sr-only">
                                             Open main menu
                                         </span>
@@ -39,13 +39,13 @@ const NavBar = () => {
                                     >
                                         <img
                                             className="block lg:hidden h-8 w-auto"
-                                            src="/apple-touch-icon.png"
-                                            alt="Workflow"
+                                            src="/logo.svg"
+                                            alt="Mates Motivate"
                                         />
                                         <img
                                             className="hidden lg:block h-8 w-auto"
-                                            src="/apple-touch-icon.png"
-                                            alt="Workflow"
+                                            src="/logo.svg"
+                                            alt="Mates Motivate"
                                         />
                                     </a>
                                     <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -61,7 +61,7 @@ const NavBar = () => {
                                     {/* Profile dropdown */}
                                     <Menu as="div" className="ml-3 relative">
                                         <div>
-                                            <Menu.Button className="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                            <Menu.Button className="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                                                 <span className="sr-only">
                                                     Open user menu
                                                 </span>
@@ -132,11 +132,11 @@ const NavBar = () => {
 
                         <Disclosure.Panel className="sm:hidden">
                             <div className="pt-2 pb-4 space-y-1">
-                                {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
+                                {/* Current: "bg-red-50 border-red-500 text-red-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
                                 <Disclosure.Button
                                     as="a"
                                     href="#"
-                                    className="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                                    className="bg-red-50 border-red-500 text-red-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
                                 >
                                     Dashboard
                                 </Disclosure.Button>

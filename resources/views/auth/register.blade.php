@@ -1,12 +1,11 @@
 <x-guest-layout>
     <div class="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-md">
-            <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt="Workflow">
+            <img class="mx-auto h-12 w-auto" src="/logo.svg" alt="Mates Motivate">
             <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Create an account</h2>
             <p class="mt-2 text-center text-sm text-gray-600">
                 Or
-                <a href="/login" class="font-medium text-indigo-600 hover:text-indigo-500"> log-in now </a>
+                <a href="/login" class="font-medium text-red-600 hover:text-red-500"> log-in now </a>
             </p>
         </div>
 

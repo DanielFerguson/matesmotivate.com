@@ -117,7 +117,7 @@ const Goal = ({ goal, owner = false }) => {
                                     )}
                                 />
                             </div>
-                            <div className="ml-3 flex-1 md:flex md:justify-between items-center">
+                            <div className="ml-3 flex-1 flex justify-between items-center">
                                 <p className="text-sm text-amber-700">
                                     👏 Your mates are encouraging you!
                                 </p>

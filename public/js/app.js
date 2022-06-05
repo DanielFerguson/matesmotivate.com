@@ -7239,7 +7239,7 @@ var Button = function Button(_ref) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("button", {
     type: type,
     onClick: onClick,
-    className: "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
+    className: "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500",
     children: children
   });
 };
@@ -7305,7 +7305,7 @@ var InputSelect = function InputSelect(_ref) {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("select", {
       id: name,
       name: name,
-      className: "mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md",
+      className: "mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md",
       defaultValue: selectedOptionValue,
       onChange: handleChange,
       children: options.map(function (option) {
@@ -7362,7 +7362,7 @@ var Input = function Input(_ref) {
         type: type,
         name: name,
         id: name,
-        className: "focus:border-indigo-500 focus:ring-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md",
+        className: "focus:border-red-500 focus:ring-red-500 block w-full sm:text-sm border-gray-300 rounded-md",
         placeholder: placeholder,
         onChange: handleChange,
         defaultValue: defaultValue
@@ -7421,7 +7421,7 @@ var Layout = function Layout(_ref) {
         href: "/site.webmanifest"
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "relative bg-indigo-600 hidden sm:block",
+      className: "relative bg-red-600 hidden sm:block",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -7493,12 +7493,12 @@ var NavBar = function NavBar() {
                   className: "flex-shrink-0 flex items-center",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
                     className: "block lg:hidden h-8 w-auto",
-                    src: "/apple-touch-icon.png",
-                    alt: "Workflow"
+                    src: "/logo.svg",
+                    alt: "Mates Motivate"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
                     className: "hidden lg:block h-8 w-auto",
-                    src: "/apple-touch-icon.png",
-                    alt: "Workflow"
+                    src: "/logo.svg",
+                    alt: "Mates Motivate"
                   })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                   className: "hidden sm:ml-6 sm:flex sm:space-x-8"
@@ -7510,7 +7510,7 @@ var NavBar = function NavBar() {
                   className: "ml-3 relative",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_5__.Menu.Button, {
-                      className: "bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
+                      className: "bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                         className: "sr-only",
                         children: "Open user menu"
@@ -7552,7 +7552,7 @@ var NavBar = function NavBar() {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Button, {
                 as: "a",
                 href: "#",
-                className: "bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium",
+                className: "bg-red-50 border-red-500 text-red-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium",
                 children: "Dashboard"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_headlessui_react__WEBPACK_IMPORTED_MODULE_4__.Disclosure.Button, {
                 as: "a",
@@ -7603,7 +7603,7 @@ var NavButton = function NavButton(_ref) {
       children = _ref.children;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: href,
-    className: "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
+    className: "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500",
     children: children
   });
 };
@@ -7637,7 +7637,7 @@ var NavLink = function NavLink(_ref) {
       children = _ref.children;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: href,
-    className: (0,_utils__WEBPACK_IMPORTED_MODULE_1__.classNames)("inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium", current ? "border-indigo-500 text-gray-900" : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"),
+    className: (0,_utils__WEBPACK_IMPORTED_MODULE_1__.classNames)("inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium", current ? "border-red-500 text-gray-900" : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"),
     children: children
   });
 };
@@ -7796,7 +7796,7 @@ var Goal = function Goal(_ref3) {
               avatars: goal.todays_encouragement.slice(0, 3)
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-            className: "ml-3 flex-1 md:flex md:justify-between items-center",
+            className: "ml-3 flex-1 flex justify-between items-center",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
               className: "text-sm text-amber-700",
               children: "\uD83D\uDC4F Your mates are encouraging you!"
@@ -8385,12 +8385,12 @@ var Home = function Home() {
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
                         alt: "Mates Motivate",
                         className: "h-8 w-auto sm:h-10",
-                        src: "https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                        src: "/logo.svg"
                       })]
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                       className: "-mr-2 flex items-center md:hidden",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_6__.Popover.Button, {
-                        className: "bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500",
+                        className: "bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500",
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                           className: "sr-only",
                           children: "Open main menu"
@@ -8413,7 +8413,7 @@ var Home = function Home() {
                     }, item.name);
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                     href: "/login",
-                    className: "font-medium text-indigo-600 hover:text-indigo-500",
+                    className: "font-medium text-red-600 hover:text-red-500",
                     children: "Log in"
                   })]
                 })]
@@ -8436,13 +8436,13 @@ var Home = function Home() {
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
                         className: "h-8 w-auto",
-                        src: "https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg",
+                        src: "/logo.svg",
                         alt: ""
                       })
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                       className: "-mr-2",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_headlessui_react__WEBPACK_IMPORTED_MODULE_6__.Popover.Button, {
-                        className: "bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500",
+                        className: "bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500",
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                           className: "sr-only",
                           children: "Close main menu"
@@ -8465,7 +8465,7 @@ var Home = function Home() {
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                     href: "/login",
-                    className: "block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100",
+                    className: "block w-full px-5 py-3 text-center font-medium text-red-600 bg-gray-50 hover:bg-gray-100",
                     children: "Log in"
                   })]
                 })
@@ -8481,7 +8481,7 @@ var Home = function Home() {
                   className: "block xl:inline",
                   children: "Achieve your goals,"
                 }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-                  className: "block text-indigo-600 xl:inline",
+                  className: "block text-red-600 xl:inline",
                   children: "celebrate success"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
@@ -8493,14 +8493,14 @@ var Home = function Home() {
                   className: "rounded-md shadow",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                     href: "/register",
-                    className: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10",
+                    className: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10",
                     children: "Get started"
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                   className: "mt-3 sm:mt-0 sm:ml-3",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                     href: "/login",
-                    className: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10",
+                    className: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 md:py-4 md:text-lg md:px-10",
                     children: "Login"
                   })
                 })]
@@ -8521,7 +8521,7 @@ var Home = function Home() {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
-          className: "text-base font-semibold uppercase tracking-wider text-indigo-600",
+          className: "text-base font-semibold uppercase tracking-wider text-red-600",
           children: "Achieve more"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
           className: "mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl",
@@ -8542,7 +8542,7 @@ var Home = function Home() {
                     className: "-mt-6",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-                        className: "inline-flex items-center justify-center rounded-md bg-indigo-500 p-3 shadow-lg",
+                        className: "inline-flex items-center justify-center rounded-md bg-red-500 p-3 shadow-lg",
                         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(feature.icon, {
                           className: "h-6 w-6 text-white",
                           "aria-hidden": "true"
@@ -8563,7 +8563,7 @@ var Home = function Home() {
         })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "bg-indigo-700",
+      className: "bg-red-700",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
@@ -8576,11 +8576,11 @@ var Home = function Home() {
             children: "Start using Mates Motivate today."
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-          className: "mt-4 text-lg leading-6 text-indigo-200",
+          className: "mt-4 text-lg leading-6 text-red-200",
           children: "We're really excited to have you as a part of our family. Let's achieve together, today."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
           href: "/register",
-          className: "mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto",
+          className: "mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-red-50 sm:w-auto",
           children: "Sign up for free"
         })]
       })
