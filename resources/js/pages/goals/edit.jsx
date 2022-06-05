@@ -3,22 +3,35 @@ import Input from "../../components/input";
 import NavLink from "../../components/nav-link";
 import Button from "../../components/button";
 import InputSelect from "../../components/input-select";
-import { useForm, Head } from "@inertiajs/inertia-react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
+import { Head, useForm } from "@inertiajs/inertia-react";
+import { TrashIcon } from "@heroicons/react/outline";
+import { ChevronLeftIcon } from "@heroicons/react/solid";
 
 const cadenceOptions = ["daily", "weekly", "bi-weekly", "monthly"];
 const lengthOptions = [7, 14, 31];
 
-const Create = () => {
-    const { data, setData, post, processing, errors } = useForm({
-        action: "",
-        cadence: cadenceOptions[0],
-        streak_goal: lengthOptions[0],
+const Create = ({ goal }) => {
+    const {
+        data,
+        setData,
+        patch,
+        delete: destroy,
+        processing,
+        errors,
+    } = useForm({
+        action: goal.action,
+        cadence: goal.cadence,
+        streak_goal: goal.streak_goal,
     });
 
     function submit(e) {
         e.preventDefault();
-        post("/goals");
+        patch(`/goals/${goal.id}`);
+    }
+
+    function remove(e) {
+        e.preventDefault();
+        destroy(`/goals/${goal.id}`);
     }
 
     function handleChange(e, key) {
@@ -27,7 +40,7 @@ const Create = () => {
 
     return (
         <Layout>
-            <Head title="Create A Goal | Mates Motivate" />
+            <Head title="Edit Your Goal | Mates Motivate" />
 
             <NavLink href="/app">
                 <div className="flex gap-1 items-center">
@@ -36,7 +49,14 @@ const Create = () => {
                 </div>
             </NavLink>
 
-            <h2>Create a Goal</h2>
+            <div className="flex items-center justify-between">
+                <h2>Edit Your Goal</h2>
+                <form onSubmit={remove}>
+                    <Button>
+                        <TrashIcon className="h-4 w-auto text-gray-400" />
+                    </Button>
+                </form>
+            </div>
 
             <form onSubmit={submit} className="grid gap-3">
                 <Input
@@ -45,6 +65,7 @@ const Create = () => {
                     type="text"
                     placeholder="Your actions"
                     handleChange={(e) => handleChange(e, "action")}
+                    defaultValue={data.action}
                 />
                 <InputSelect
                     label="How often will you check in?"
@@ -61,7 +82,7 @@ const Create = () => {
                     handleChange={(e) => handleChange(e, "streak_goal")}
                 />
                 <div className="flex justify-end">
-                    <Button>Create Goal</Button>
+                    <Button>Save Goal</Button>
                 </div>
             </form>
         </Layout>

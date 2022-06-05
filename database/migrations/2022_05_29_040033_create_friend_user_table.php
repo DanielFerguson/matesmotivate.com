@@ -15,11 +15,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('friend_user', function (Blueprint $table) {
-            $table->primary(['user_id', 'friend_id', 'goal_id']);
-            $table->foreignIdFor(User::class, 'user_id');
-            $table->foreignIdFor(User::class, 'friend_id');
+        Schema::create('goal_user', function (Blueprint $table) {
+            $table->primary(['goal_id', 'user_id']);
             $table->foreignIdFor(Goal::class);
+            $table->foreignIdFor(User::class, 'user_id');
             $table->timestamps();
         });
     }

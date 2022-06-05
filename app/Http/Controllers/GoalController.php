@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreGoalRequest;
 use App\Models\Goal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Redis;
 use Inertia\Inertia;
 
 class GoalController extends Controller
@@ -24,9 +27,11 @@ class GoalController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreGoalRequest $request)
     {
-        //
+        Goal::create($request->all());
+
+        return Redirect::route('app');
     }
 
     /**
@@ -37,7 +42,9 @@ class GoalController extends Controller
      */
     public function edit(Goal $goal)
     {
-        // TODO
+        return Inertia::render('goals/edit', [
+            'goal' => $goal
+        ]);
     }
 
     /**
@@ -47,9 +54,11 @@ class GoalController extends Controller
      * @param  \App\Models\Goal  $goal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Goal $goal)
+    public function update(StoreGoalRequest $request, Goal $goal)
     {
-        //
+        $goal->update($request->all());
+
+        return Redirect::route('app');
     }
 
     /**
@@ -60,6 +69,8 @@ class GoalController extends Controller
      */
     public function destroy(Goal $goal)
     {
-        //
+        $goal->delete();
+
+        return Redirect::route('app');
     }
 }

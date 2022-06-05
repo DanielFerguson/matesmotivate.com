@@ -1,30 +1,12 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { usePage } from "@inertiajs/inertia-react";
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-}
-
-const NavLink = ({ href, current = false, children }) => {
-    return (
-        <a
-            href={href}
-            className={classNames(
-                "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
-                current
-                    ? "border-indigo-500 text-gray-900"
-                    : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
-            )}
-        >
-            {children}
-        </a>
-    );
-};
+import { usePage, useForm } from "@inertiajs/inertia-react";
+import NavLink from "./nav-link";
+import { classNames } from "../utils";
 
 const NavBar = () => {
-    const { avatar } = usePage().props;
+    const { avatar, csrf_token } = usePage().props;
 
     return (
         <>
@@ -35,7 +17,7 @@ const NavBar = () => {
                             <div className="relative flex justify-between h-16">
                                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                     {/* Mobile menu button */}
-                                    <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                    {/* <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                                         <span className="sr-only">
                                             Open main menu
                                         </span>
@@ -50,21 +32,24 @@ const NavBar = () => {
                                                 aria-hidden="true"
                                             />
                                         )}
-                                    </Disclosure.Button>
+                                    </Disclosure.Button> */}
                                 </div>
                                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                                    <div className="flex-shrink-0 flex items-center">
+                                    <a
+                                        href="/app"
+                                        className="flex-shrink-0 flex items-center"
+                                    >
                                         <img
                                             className="block lg:hidden h-8 w-auto"
-                                            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                                            src="/apple-touch-icon.png"
                                             alt="Workflow"
                                         />
                                         <img
                                             className="hidden lg:block h-8 w-auto"
-                                            src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
+                                            src="/apple-touch-icon.png"
                                             alt="Workflow"
                                         />
-                                    </div>
+                                    </a>
                                     <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                                         <NavLink href="#" current={true}>
                                             Dashboard
@@ -99,7 +84,7 @@ const NavBar = () => {
                                             leaveTo="transform opacity-0 scale-95"
                                         >
                                             <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                                <Menu.Item>
+                                                {/* <Menu.Item>
                                                     {({ active }) => (
                                                         <a
                                                             href="#"
@@ -128,21 +113,26 @@ const NavBar = () => {
                                                             Settings
                                                         </a>
                                                     )}
-                                                </Menu.Item>
+                                                </Menu.Item> */}
                                                 <Menu.Item>
-                                                    {({ active }) => (
-                                                        <a
-                                                            href="#"
-                                                            className={classNames(
-                                                                active
-                                                                    ? "bg-gray-100"
-                                                                    : "",
-                                                                "block px-4 py-2 text-sm text-gray-700"
-                                                            )}
+                                                    <form
+                                                        action="/logout"
+                                                        method="post"
+                                                    >
+                                                        <input
+                                                            type="hidden"
+                                                            name="_token"
+                                                            value={csrf_token}
+                                                        />
+                                                        <button
+                                                            onClick={() =>
+                                                                logout()
+                                                            }
+                                                            className="block px-4 py-2 text-sm text-gray-700"
                                                         >
                                                             Sign out
-                                                        </a>
-                                                    )}
+                                                        </button>
+                                                    </form>
                                                 </Menu.Item>
                                             </Menu.Items>
                                         </Transition>
