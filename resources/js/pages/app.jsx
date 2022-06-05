@@ -7,7 +7,6 @@ import { PlusIcon } from "@heroicons/react/solid";
 import { Head, Link, usePage, useForm } from "@inertiajs/inertia-react";
 import { classNames } from "../utils";
 import Confetti from "react-confetti";
-import { InformationCircleIcon } from "@heroicons/react/solid";
 
 function calculateCheckInClasses(event) {
     if (event.passed && !event.checked_in) {

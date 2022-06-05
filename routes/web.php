@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\CheckInController;
 use App\Http\Controllers\GoalController;
 use App\Http\Requests\StoreMentorRequest;
 use App\Models\Goal;
@@ -14,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 use Laravel\Socialite\Facades\Socialite;
 
-Route::view('/', 'welcome');
+Route::inertia('/', 'home');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/app', function () {
